@@ -20,6 +20,6 @@ while connected == True:
     #print('Test')
     if ser.inWaiting() >= 0:
         print("we actually get some input")
-        reading = ser.read(ser.inWaiting()).decode('ascii')
+        reading = ser.read(ser.in_Waiting()).decode('ascii')
         print(reading, end='')
     #other code
