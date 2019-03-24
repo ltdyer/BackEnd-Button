@@ -19,7 +19,6 @@ if ser.isOpen():
 #we cant have the button press in arduino activate the request because its the wrong program
 
 while connected == True:
-    print('Test')
     if ser.inWaiting() > 0:
         reading = ser.readline().decode('ascii')
         print(reading, end='')
