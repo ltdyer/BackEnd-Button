@@ -23,4 +23,4 @@ while connected == True:
         reading = ser.readline().decode('ascii')
         print(reading, end='')
         if reading[:4] == 'Cool':
-            request = requests.post('https://litme.net/api/dinner')
+            request = requests.post('https://litme.net/api/dinner', timeout=1)
