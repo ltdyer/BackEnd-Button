@@ -5,11 +5,12 @@ import requests
 
 connected = False
 ser = serial.Serial(
-    port = 'dev/tty96B0', #/dev/ttyUSB0 on Linux
+    port = '/dev/tty96B0', #/dev/ttyUSB0 on Linux
     baudrate = 9600, #9600 on the DragonBoard
     timeout = 3
 )
-ser.open()
+if not ser.isOpen():
+    ser.open()
 if ser.isOpen():
     print(ser.name + " is Open!")
     connected = True
