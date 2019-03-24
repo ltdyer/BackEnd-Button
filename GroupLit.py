@@ -9,7 +9,8 @@ ser = serial.Serial(
     baudrate = 9600, #9600 on the DragonBoard
     timeout = 3
 )
-ser.open()
+if not ser.open():
+    ser.open()
 if ser.isOpen():
     print(ser.name + " is Open!")
     connected = True
