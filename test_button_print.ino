@@ -2,6 +2,7 @@ int button_pin = A0;
 
 void setup()
 {
+    Serial.begin(9600);
     pinMode(button_pin, INPUT);
 }
 
