@@ -22,5 +22,5 @@ while connected == True:
     if ser.inWaiting() > 0:
         reading = ser.readline().decode('ascii')
         print(reading, end='')
-        if reading == 'Cool':
+        if reading[:4] == 'Cool':
             request = requests.post('https://litme.net/api/dinner')
