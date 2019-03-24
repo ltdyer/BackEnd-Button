@@ -19,6 +19,7 @@ if ser.isOpen():
 while connected == True:
     #print('Test')
     if ser.inWaiting() >= 0:
+        print("we actually get some input")
         reading = ser.read(ser.inWaiting()).decode('ascii')
         print(reading, end='')
     #other code
