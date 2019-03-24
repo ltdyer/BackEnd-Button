@@ -7,14 +7,13 @@ void setup()
 }
 
 bool last_button = false;
-int led_state = 0;
 void loop()
 {
     bool button = digitalRead(button_pin);
     if (last_button != button)
     {
         if (button) {
-            Serial.print("Cool");
+            Serial.println("Cool");
         }
         delay(100);
     }
